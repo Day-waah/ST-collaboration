@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="homepage-container">
+    <div class="homepage-header">
+      <button onclick="navigateTo('index.html')" class="btn-secondary">Back</button>
+      <h1>Teacher Homepage</h1>
+      <button onclick="navigateTo('teacher-profile.html')" class="btn-primary">Profile</button>
+    </div>
+    <div class="homepage-content">
+      <div class="grid query-section">
+        <h2>Student Queries</h2>
+        <ul>
+          <li>What is the difference between DFS and BFS? - Student A</li>
+          <li>Explain Dynamic Programming. - Student B</li>
+        </ul>
+        <button class="btn-primary">Answer</button>
+      </div>
+      <div class="grid challenge-section">
+        <h2>Assign Challenges</h2>
+        <textarea placeholder="Describe the challenge here..."></textarea>
+        <button class="btn-primary">Assign</button>
+      </div>
+      <div class="grid rating-section">
+        <h2>Ratings</h2>
+        <ul>
+          <li>Student A - 4.5/5</li>
+          <li>Student B - 4/5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feedback-section">
+      <h2>Feedback</h2>
+      <textarea placeholder="Leave your feedback here..."></textarea>
+      <button class="btn-primary">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

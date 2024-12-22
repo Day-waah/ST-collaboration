@@ -7,29 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container profile-container">
-    <h1>Student Profile</h1>
+  <div class="profile-container">
+    <div class="cover-photo">
+      <img src="assets/cover.jpg" alt="Cover Photo">
+      <img src="assets/profile.jpg" alt="Profile Picture" class="profile-picture">
+    </div>
     <div class="profile-details">
-      <p><strong>Name:</strong> <span id="studentName">xyz</span></p>
-      <p><strong>College:</strong> <span id="studentCollege">qwerty</span></p>
-      <p><strong>Points:</strong> <span id="studentPoints">0</span></p>
-      <p><strong>Year:</strong> <span id="studentYear">0</span></p>
-      <p><strong>Branch:</strong> <span id="studentBranch">qwerty</span></p>
-      <p><strong>Ranking:</strong> <span id="studentRanking">0</span></p>
-      <p><strong>Total Queries Solved:</strong> <span id="studentQueriesSolved">0</span></p>
-      <p><strong>Total Queries Posted:</strong> <span id="studentQueriesPosted">0</span></p>
+      <h1>John Doe</h1>
+      <p><strong>College:</strong> XYZ University</p>
+      <p><strong>Branch:</strong> Computer Science</p>
+      <p><strong>Year:</strong> 2nd</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+    </div>
+    <div class="friend-list">
+      <h2>Friends</h2>
+      <ul>
+        <li>Jane Smith</li>
+        <li>Alan Walker</li>
+      </ul>
     </div>
   </div>
-
-  <script>
-    document.getElementById('studentName').textContent = localStorage.getItem('studentName') || 'xyz';
-    document.getElementById('studentCollege').textContent = localStorage.getItem('studentCollege') || 'qwerty';
-    document.getElementById('studentPoints').textContent = localStorage.getItem('studentPoints') || '0';
-    document.getElementById('studentYear').textContent = localStorage.getItem('studentYear') || '0';
-    document.getElementById('studentBranch').textContent = localStorage.getItem('studentBranch') || 'qwerty';
-    document.getElementById('studentRanking').textContent = localStorage.getItem('studentRanking') || '0';
-    document.getElementById('studentQueriesSolved').textContent = localStorage.getItem('studentQueriesSolved') || '0';
-    document.getElementById('studentQueriesPosted').textContent = localStorage.getItem('studentQueriesPosted') || '0';
-  </script>
 </body>
 </html>

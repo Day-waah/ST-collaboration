@@ -1,38 +1,66 @@
-// Navigate to login page with role-based information
-function navigateTo(role) {
-    localStorage.setItem("userRole", role);
-    window.location.href = "login.html";
+// Function to navigate between pages
+function navigateTo(page) {
+    window.location.href = page;
   }
   
-  // Handle login submission
+  // Handle Login Submission
   function handleLogin(event) {
     event.preventDefault();
     const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const role = localStorage.getItem("userRole");
+    const role = new URLSearchParams(window.location.search).get("role");
   
-    // Assuming authentication is successful, we store user data in localStorage
     if (role === "student") {
-      localStorage.setItem('studentName', 'xyz');
-      localStorage.setItem('studentCollege', 'ABC University');
-      localStorage.setItem('studentPoints', '0');
-      localStorage.setItem('studentYear', '0');
-      localStorage.setItem('studentBranch', 'Computer Science');
-      localStorage.setItem('studentRanking', '0');
-      localStorage.setItem('studentQueriesSolved', '0');
-      localStorage.setItem('studentQueriesPosted', '0');
-      window.location.href = "student-profile.html";
+      navigateTo("student-homepage.html");
     } else if (role === "teacher") {
-      localStorage.setItem('teacherName', 'mnb');
-      localStorage.setItem('teacherCollege', 'ABC University');
-      localStorage.setItem('teacherPoints', '0');
-      localStorage.setItem('teacherSubject', 'qwerty');
-      localStorage.setItem('teacherRanking', '0');
-      localStorage.setItem('teacherQueriesSolved', '0');
-      localStorage.setItem('teacherQueriesPosted', '0');
-      window.location.href = "teacher-profile.html";
+      navigateTo("teacher-homepage.html");
     } else {
-      alert("Role not defined. Please go back to the landing page.");
+      alert("Invalid role. Please return to the welcome page.");
+    }
+  }
+  
+  // Handle Signup Submission
+  function handleSignup(event, role) {
+    event.preventDefault();
+    alert(`${role.charAt(0).toUpperCase() + role.slice(1)} signed up successfully!`);
+    navigateTo("login.html");
+  }
+  
+  // Handle Query Posting (Student)
+  function postQuery(event) {
+    event.preventDefault();
+    const queryContent = document.getElementById("query-input").value;
+  
+    if (queryContent.trim() !== "") {
+      alert("Query posted successfully!");
+      document.getElementById("query-input").value = "";
+    } else {
+      alert("Please enter a valid query.");
+    }
+  }
+  
+  // Handle Challenge Assignment (Teacher)
+  function assignChallenge(event) {
+    event.preventDefault();
+    const challengeContent = document.getElementById("challenge-input").value;
+  
+    if (challengeContent.trim() !== "") {
+      alert("Challenge assigned successfully!");
+      document.getElementById("challenge-input").value = "";
+    } else {
+      alert("Please describe the challenge before assigning.");
+    }
+  }
+  
+  // Handle Feedback Submission
+  function submitFeedback(event) {
+    event.preventDefault();
+    const feedbackContent = document.getElementById("feedback-input").value;
+  
+    if (feedbackContent.trim() !== "") {
+      alert("Thank you for your feedback!");
+      document.getElementById("feedback-input").value = "";
+    } else {
+      alert("Please write your feedback before submitting.");
     }
   }
   
