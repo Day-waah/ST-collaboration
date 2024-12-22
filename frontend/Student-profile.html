@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container profile-container">
+    <h1>Student Profile</h1>
+    <div class="profile-details">
+      <p><strong>Name:</strong> <span id="studentName">xyz</span></p>
+      <p><strong>College:</strong> <span id="studentCollege">qwerty</span></p>
+      <p><strong>Points:</strong> <span id="studentPoints">0</span></p>
+      <p><strong>Year:</strong> <span id="studentYear">0</span></p>
+      <p><strong>Branch:</strong> <span id="studentBranch">qwerty</span></p>
+      <p><strong>Ranking:</strong> <span id="studentRanking">0</span></p>
+      <p><strong>Total Queries Solved:</strong> <span id="studentQueriesSolved">0</span></p>
+      <p><strong>Total Queries Posted:</strong> <span id="studentQueriesPosted">0</span></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('studentName').textContent = localStorage.getItem('studentName') || 'xyz';
+    document.getElementById('studentCollege').textContent = localStorage.getItem('studentCollege') || 'qwerty';
+    document.getElementById('studentPoints').textContent = localStorage.getItem('studentPoints') || '0';
+    document.getElementById('studentYear').textContent = localStorage.getItem('studentYear') || '0';
+    document.getElementById('studentBranch').textContent = localStorage.getItem('studentBranch') || 'qwerty';
+    document.getElementById('studentRanking').textContent = localStorage.getItem('studentRanking') || '0';
+    document.getElementById('studentQueriesSolved').textContent = localStorage.getItem('studentQueriesSolved') || '0';
+    document.getElementById('studentQueriesPosted').textContent = localStorage.getItem('studentQueriesPosted') || '0';
+  </script>
+</body>
+</html>
