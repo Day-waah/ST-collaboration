@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="homepage-container">
+    <div class="homepage-header">
+      <button onclick="navigateTo('index.html')" class="btn-secondary">Back</button>
+      <h1>Student Homepage</h1>
+      <button onclick="navigateTo('student-profile.html')" class="btn-primary">Profile</button>
+    </div>
+    <div class="homepage-content">
+      <div class="grid query-section">
+        <h2>Post a Query</h2>
+        <textarea placeholder="Type your query here..."></textarea>
+        <button class="btn-primary">Submit</button>
+      </div>
+      <div class="grid leaderboard-section">
+        <h2>Leaderboard</h2>
+        <ul>
+          <li>John Doe - 120 Points</li>
+          <li>Jane Smith - 100 Points</li>
+          <li>Alan Walker - 90 Points</li>
+        </ul>
+      </div>
+      <div class="grid queries-section">
+        <h2>Recent Queries</h2>
+        <ul>
+          <li>How to implement a Binary Tree? - John</li>
+          <li>What is Polymorphism? - Jane</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feedback-section">
+      <h2>Feedback</h2>
+      <textarea placeholder="Leave your feedback here..."></textarea>
+      <button class="btn-primary">Submit</button>
+    </div>
+  </div>
+</body>
+</html>
